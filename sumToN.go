@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
 
 /*
 This method uses a niave method with a for loop that increments through every number from 1 to n and adds that number to the variable "sum".
@@ -43,8 +47,14 @@ func sum_to_n_c(n int) int {
 }
 
 func main() {
-	var n = 112
-	fmt.Println(sum_to_n_a(n))
-	fmt.Println(sum_to_n_b(n))
-	fmt.Println(sum_to_n_c(n))
+	n, err := strconv.Atoi(os.Args[1])
+
+	if err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
+
+	fmt.Println("Naive For Loop Method:", sum_to_n_a(n))
+	fmt.Println("Mathematical Formula Method:", sum_to_n_b(n))
+	fmt.Println("Divide-and-Conquer Recursive Method:", sum_to_n_c(n))
 }
