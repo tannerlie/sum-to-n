@@ -35,7 +35,7 @@ To run the Go program:
 2. **Clone the repository**: If you haven’t already, clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/sum-to-n.git
+   git clone https://github.com/tannerlie/sum-to-n.git
    ```
 
 3. **Navigate to the project folder**:
@@ -47,7 +47,7 @@ To run the Go program:
 4. **Run the program**: Execute the following command to run the Go program and calculate the sum using the three methods:
 
    ```
-   go run main.go
+   go run sumToN.go <value-of-n>
    ```
 
 This will output the sum using each of the three methods.
